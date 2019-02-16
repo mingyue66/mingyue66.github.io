@@ -7,6 +7,14 @@
 </head>
 <body>
 <a href="about.html">测试超链接about</a>
+
+<form action="https://formspree.io/503772004@qq.com"
+method="POST">
+	<input type="text" name="name">
+	<input type="email" name="repl">
+	<input type="submit" value="Send">
+	</form>
+	
 <!doctype html>
 <html>
 <head>
@@ -14,37 +22,6 @@
 <title>Untitled Document</title>
 </head>
 
-<body>
-<form id="content">
-	<input type="text" name="name" placeholder="昵称"/>       
-	<input type="email" name="_replyto" placeholder="输入你的生日祝福"/>
-	<input type="button" value="发送～" id="btn"/>
-    写下你想说的话吧！
-</form>
-</body>
-<script src="../js/jquery-3.3.1.min.js"></script>
-<script>
-	$("#btn").on("click",function(){
-		var obj = $("#content").serialize();  //获取id为content的form表单里面的内容,name值均为formspree提供不能更改
-		$.ajax({
-			type:"post",						//必须post请求
-			url:"https://formspree.io/503772004@qq.com", //abc@qq.com换成你要接收的邮箱地址
-			async:true,
-			data:obj,            									
-			dataType:"json",
-			success: res=>{
-				alert('正在飞往脸脸的邮箱，谢谢！');   			//发送成功后的操作
-			},
-			error:res=>{
-				alert("未知错误,发送失败ごめん！");
-			}
-		});
-	})
-</script>
-
-
-
-</body>
 </html>
 
 <div id="wmd-preview" class="wmd-preview"><div class="md-section-divider"></div><div class="md-section-divider"></div>
