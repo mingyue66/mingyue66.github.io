@@ -1,63 +1,132 @@
-<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>脸脸のWebsite〜へようこそ！〜</title>
-
-</head>
-<body>
-<a href="about.html">测试超链接about</a>
-
-<form action="https://formspree.io/503772004@qq.com"
-method="POST">
-	<input type="text" name="name">
-	<input type="email" name="repl">
-	<input type="submit" value="Send">
-	</form>
-	
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Untitled Document</title>
-</head>
-
-</html>
-
-<div id="wmd-preview" class="wmd-preview"><div class="md-section-divider"></div><div class="md-section-divider"></div>
-  <h1 data-anchor-id="h84o" id="脸脸のwebsite"><strong>脸脸のWebsite</strong><br>
-  </h1>
-  <hr><p data-anchor-id="gap4">Hello my friends and strangers! Welcome to my personal website. <br>
-I am learning to build a website via Github just for fun!</p><div class="md-section-divider"></div><h2 data-anchor-id="82kz" id="thank-you-for-visiting">Thank you for visiting!</h2><div class="md-section-divider"></div><h2 data-anchor-id="7i7a" id="title"><img src="<img src=http://thyrsi.com/t6/671/1550337471x2890202402.jpg />"此处输入图片的描述" width="200"></h2>
-<p>点击按钮为脸脸送上生日祝福</p>
-
-<button onclick="myFunction()"> 生日快乐！</button>
-
-<p>你是第</p><p id="demo">0</p><p>个祝脸脸生快的人～谢谢！</p>
-
-<script type="text/javascript">
-
-
+    <head>
+        <meta charset="utf-8">
+            <title>
+                脸脸のWebsite〜へようこそ！〜
+            </title>
+        </meta>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js">
+        </script>
+        <!-- JQuery -->
+    </head>
+    <body>
+        <a href="about.html">
+            测试超链接about
+        </a>
+        <div>
+            <p>
+                name:
+                <input id="name" type="text"/>
+            </p>
+            <p>
+                message:
+                <input id="message" type="text"/>
+            </p>
+            <p>
+                replyemail:
+                <input id="replyemail" type="email"/>
+            </p>
+            <button onclick="ztxFunction()">
+                Send
+            </button>
+        </div>
+        <meta charset="utf-8">
+            <title>
+                Untitled Document
+            </title>
+            <div class="wmd-preview" id="wmd-preview">
+                <div class="md-section-divider">
+                </div>
+                <div class="md-section-divider">
+                </div>
+                <h1 data-anchor-id="h84o" id="脸脸のwebsite">
+                    <strong>
+                        脸脸のWebsite
+                    </strong>
+                    <br>
+                    </br>
+                </h1>
+                <hr>
+                    <p data-anchor-id="gap4">
+                        Hello my friends and strangers! Welcome to my personal website.
+                        <br>
+                            I am learning to build a website via Github just for fun!
+                        </br>
+                    </p>
+                    <div class="md-section-divider">
+                    </div>
+                    <h2 data-anchor-id="82kz" id="thank-you-for-visiting">
+                        Thank you for visiting!
+                    </h2>
+                    <div class="md-section-divider">
+                    </div>
+                    <h2 data-anchor-id="7i7a" id="title">
+                        <img src="<img src=http://thyrsi.com/t6/671/1550337471x2890202402.jpg />" width="200" 此处输入图片的描述"=""/>
+                    </h2>
+                    <p>
+                        点击按钮为脸脸送上生日祝福
+                    </p>
+                    <button onclick="ztxFunction()">
+                        生日快乐！
+                    </button>
+                    <p>
+                        你是第
+                    </p>
+                    <p id="demo">
+                        0
+                    </p>
+                    <p>
+                        个祝脸脸生快的人～谢谢！
+                    </p>
+                    <script type="text/javascript">
 var add = (function(){
-
-var count = 0;
-
-return function(){
-
-return count += 1;
-
-}
-
+  var count = 0;
+  return function(){
+    return count += 1;
+  }
 })();
-
 function myFunction(){
-
-document.getElementById("demo").innerHTML = add();
-
+  document.getElementById("demo").innerHTML = add();
 }
-
-</script>
-<p data-anchor-id="bzs9">You can contact me on <a href="mingyue66.github.io/mail">mingyue.huo@shisu.edu.cn</a></p>
-</div>
-</body>
+function ztxFunction(){
+  // var host = '127.0.0.1';
+  var host = '123.206.98.176';
+  var url = 'http://'+host+':5050/api/send_email_sync';
+  var data = {
+    name:$('#name').val(),
+    replyemail:$('#replyemail').val(),
+    message:$('#message').val()
+  }
+  console.log('localdata',data)
+  $.ajax({
+    type: 'POST',
+    dataType: 'html',
+    url: url,
+    data: data,
+    success: function (res) {
+      console.log(res)
+      res_json = JSON.parse(res)
+      console.log(res_json)
+      if (res_json.state == 0) {
+        alert('success')
+      } else {
+        alert('Error:'+res_json.message)
+      }
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+      alert('server error');
+    }
+  });
+}
+                    </script>
+                    <p data-anchor-id="bzs9">
+                        You can contact me on
+                        <a href="mingyue66.github.io/mail">
+                            mingyue.huo@shisu.edu.cn
+                        </a>
+                    </p>
+                </hr>
+            </div>
+        </meta>
+    </body>
 </html>
