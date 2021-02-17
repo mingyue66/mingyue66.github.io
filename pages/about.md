@@ -7,7 +7,7 @@ comments: true
 menu: About
 permalink: /about/
 ---
-*“In all things of nature there is something of the marvelous.”*。
+*“In all things of nature there is something of the marvelous.”*
                               *--Aristotle, Parts of Animals*
 
 

@@ -51,11 +51,11 @@ email: mhuo5@illinois.edu
 navs:
   -
     href: /
-    label: 首页
+    label: 首页 #首页，放点什么好呢？
 
   -
     href: /categories/
-    label: 分类
+    label: Blog #用作博客的分类索引
 
 #   -
 #     href: /archives/
@@ -65,17 +65,17 @@ navs:
 #     href: /open-source/
 #     label: 开源
 
-  -
-    href: /wiki/
-    label: 维基
+#  -
+#    href: /wiki/
+#    label: 维基
 
-  -
-    href: /links/
-    label: 链接
+#  -
+#    href: /links/
+#    label: 链接
 
   -
     href: /about/
-    label: 关于
+    label: About #按钮的名字
 
 # ---------------- #
 #       RSS        #
