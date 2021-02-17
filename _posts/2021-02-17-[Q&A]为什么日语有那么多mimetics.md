@@ -6,7 +6,7 @@ description: 本篇记录了从各个地方看到的和语言学有关的有趣�
 keywords: Linguistics, Phonology, Japanese, mimetics
 ---
 
-
+日语有一个有趣的特点
 
 
 
