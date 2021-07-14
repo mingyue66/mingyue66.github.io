@@ -1,18 +1,26 @@
 - name: Languages
   keywords:
-      - Mandarin Native
-      - English Near-native
-      - Japanese Advanced
+      - Mandarin
+      - English 
+      - Japanese 
       - Korean Beginner
       - American Sign Language Beginner
 
 - name: Programming
   keywords:
       - Python
+      - And only python
 
-- name: Phonetics
+- name: Software
   keywords:
       - Praat
       - Adobe Audition
       - Audacity
       - MuseScore
+      - Logic
+      - Adobe Photoshop (was really good)
+
+- name: Hobby
+  keywords:
+      - Softball
+      - Piano

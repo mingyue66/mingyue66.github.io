@@ -12,7 +12,7 @@ permalink: /about/
 
 
 ## Profile
-欢迎来到我的博客，我会在这里分享关于声音的有趣话题！ Hi, welcome to my personal blog! My name is Mingyue, a graduate student at University of Illinois at Urbana-Champaign. I will write down my thoughts on interesting topics about human speech, signal processing, etc. Feel free to contact me via email if you have any comments on my blogs. 
+一个小菜鸟的博客，试图记录和分享关于声音、语言和音乐的有趣话题. Welcome to my personal blog! I will write down my thoughts on interesting topics about human speech, music and signal processing. Feel free to contact me via email if you have any comments. 
 
 <ul>
 {% for website in site.data.social %}
