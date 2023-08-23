@@ -1,141 +1,274 @@
----
-layout: default
-class: home
-css: ['pages/index.css']
-comments: false
----
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 
-{% assign assets_base_url = site.url %}
-{% if site.cdn.jsdelivr.enabled %}
-{% assign assets_base_url = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: '@master' %}
-{% endif %}
-<section class="banner">
-    <div class="collection-head">
-      <div class="container">
-        <div class="columns">
-          <div class="column two-thirds">
-            <div class="collection-title">
-              <h1 class="collection-header" id="sub-title"><span>{{ site.subtitle }}</span></h1>
-              <div class="collection-info">
-                <span class="meta-info mobile-hidden">
-                  <span class="octicon octicon-location"></span>
-                  {{ site.location }}
-                </span>
-                {% if site.organization %}
-                <span class="meta-info">
-                  <span class="octicon octicon-organization"></span>
-                  <a href="{{ site.organization_url }}" target="_blank">{{ site.organization }}</a>
-                </span>
-                {% endif %}
-                <span class="meta-info">
-                  <span class="octicon octicon-mark-github"></span>
-                  <a href="https://github.com/{{ site.github_username }}" target="_blank">{{ site.github_username }}</a>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="column one-third mobile-hidden">
-            <div class="collection-title">
-              {% include sidebar-qrcode.html %}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-</section>
-<!-- /.banner -->
-<section class="container content">
-    <div class="columns">
-        <div class="column two-thirds" >
-            <ol class="repo-list">
-              {% for post in site.posts %}
-              {% if paginator.page == 1 %}
-              {% if post.topmost == true %}
-              <li class="repo-list-item">
-                <h3 class="repo-list-name">
-                  <a href="{{ site.url }}{{ post.url }}"><span class="top-most-flag">[置顶]</span>{{ post.title }}</a>
-                </h3>
-                <p class="repo-list-description">
-                {{ post.excerpt | strip_html | strip }}
-                </p>
-                <p class="repo-list-meta">
-                <span class="meta-info">
-                  <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
-                </span>
-                {% for cat in post.categories %}
-                <span class="meta-info">
-                  <span class="octicon octicon-file-directory"></span>
-                  <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
-                </span>
-                {% endfor %}
-                </p>
-              </li>
-              {% endif %}
-              {% endif %}
-              {% endfor %}
+<head>
+  <!-- Please delete this script if you use this HTML. -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7580334-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-              {% for post in paginator.posts %}
-              {% if post.topmost != true %}
-              <li class="repo-list-item">
-                <h3 class="repo-list-name">
-                  <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-                </h3>
-                <p class="repo-list-description">
-                {{ post.excerpt | strip_html | strip }}
-                </p>
-                <p class="repo-list-meta">
-                <span class="meta-info">
-                  <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
-                </span>
-                {% for cat in post.categories %}
-                <span class="meta-info">
-                  <span class="octicon octicon-file-directory"></span>
-                  <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
-                </span>
-                {% endfor %}
-                </p>
-              </li>
-              {% endif %}
-              {% endfor %}
-            </ol>
-        </div>
-        <div class="column one-third">
-            {% include sidebar-search.html %}
-            {% include sidebar-categories-cloud.html %}
-            {% include sidebar-ad.html %}
-            {% include sidebar-popular-repo.html %}
-        </div>
-    </div>
-    <div class="pagination text-align">
-      <div class="btn-group">
-        {% if paginator.previous_page %}
-          {% if paginator.previous_page == 1 %}
-              <a href="{{ site.url }}/" class="btn btn-outline">&laquo;</a>
-          {% else %}
-              <a href="{{ site.url }}/page{{paginator.previous_page}}"  class="btn btn-outline">&laquo;</a>
-          {% endif %}
-        {% else %}
-            <button disabled="disabled" href="javascript:;" class="btn btn-outline">&laquo;</button>
-        {% endif %}
-        {% if paginator.page == 1 %}
-            <a href="javascript:;" class="active btn btn-outline">1</a>
-        {% else %}
-            <a href="{{ site.url }}/"  class="btn btn-outline">1</a>
-        {% endif %}
-        {% for count in (2..paginator.total_pages) %}
-          {% if count == paginator.page %}
-              <a href="javascript:;"  class="active btn btn-outline">{{count}}</a>
-          {% else %}
-              <a href="{{ site.url }}/page{{count}}"  class="btn btn-outline">{{count}}</a>
-          {% endif %}
-        {% endfor %}
-        {% if paginator.next_page %}
-            <a href="{{ site.url }}/page{{paginator.next_page}}"  class="btn btn-outline">&raquo;</a>
-        {% else %}
-            <button disabled="disabled" href="javascript:;" class="btn btn-outline">&raquo;</button>
-        {% endif %}
-        </div>
-    </div>
-    <!-- /pagination -->
-</section>
-<!-- /section.content -->
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-7580334-1');
+  </script>
+  <meta name="viewport" content="width=500; text/html; charset=utf-8" http-equiv="Content-Type">
+  <link href="stylesheet.css" rel="stylesheet" type="text/css">
+  <!-- <link rel="icon" type="image/png" href="images/icon.png"> -->
+  <title>Yuheng Zhang @ UIUC</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
+    <tr>
+      <td>
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+          <tr>
+            <td width="67%" valign="middle">
+              <p align="center">
+                <name>Yuheng Zhang 「张宇恒」</name>
+              </p>
+              <p>
+                I am a first-year Phd student at UIUC CS deparment. I am very fortunate to be advised by Prof. Nan Jiang. I received my M.S. in Computer Science from UIUC and am very fortunate to be advised by Prof. Hanghang Tong. I am interested in reinforcement learning theory, online learning, bandits, and learning in games.
+              </p>
+              <p> Email: yuhengz2@illinois.edu
+              </p>
+              <p align=left>
+                  <a href="https://scholar.google.com/citations?user=IoEBLNYAAAAJ&hl=en" target="_blank">
+                  Google Scholar</a> &nbsp&nbsp/&nbsp&nbsp
+                  <a href="https://www.linkedin.com/in/zhangyuheng/" target="_blank">
+                  Linkedin</a> &nbsp&nbsp&nbsp&nbsp
+                 <!--  <a href="file/CV.pdf" target="_blank">
+                  CV</a> &nbsp&nbsp&nbsp&nbsp -->
+              </p>
+            </td>
+            <td width="33%">
+              <img align="center" width="70%" src="images/go.jpg">
+            </td>
+          </tr>
+        </table>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+          <tr>
+            <td width="100%" valign="middle">
+              <heading>Education</heading>
+              <p>
+                Phd (Computer Science), UIUC. 2022.8 - Present
+              </p>
+              <p>
+                MS (Computer Science), UIUC. 2020.8 - 2022.5
+              </p>
+              <p>
+                <b> David J. Kuck Outstanding MS Thesis Award</b>
+              </p>
+              <p>
+                BS (Computer Science), Fudan University. 2016.9 - 2020.6
+              </p>
+              <p>
+                <b> Outstanding Undergraduates Graduates of Shanghai </b>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+          <tr>
+            <td width="100%" valign="middle">
+              <heading>Publications (* means equal contribution)</heading>
+            </td>
+          </tr>
+
+          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <td valign="middle" width="100%">
+              <papertitle>Practical Contextual Bandits with Feedback Graphs</papertitle>
+              <br>
+              Mengxiao Zhang*, <strong>Yuheng Zhang*</strong>, Olga Vrousgou, Haipeng Luo, and Paul Mineiro.
+              <br>
+              <em>Under Review</em>
+              <br>
+            </td>
+          </tr>
+
+
+
+          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <td valign="middle" width="100%">
+              <papertitle>Offline Learning in Markov Games with General Function Approximation</papertitle>
+              <br>
+              <strong>Yuheng Zhang</strong>, Yu Bai, Nan Jiang
+              <br>
+              <em>ICML 2023</em>
+              <br>
+            </td>
+          </tr>
+
+          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <td valign="middle" width="100%">
+              <papertitle>Improved High-Probability Regret for Adversarial Bandits with Time-Varying Feedback Graphs</papertitle>
+              <br>
+              Haipeng Luo*, Hanghang Tong*, Mengxiao Zhang*, <strong>Yuheng Zhang*</strong> (α-β order)
+              <br>
+              <em>ALT 2023</em>
+              <br>
+            </td>
+          </tr>
+
+          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <td valign="middle" width="100%">
+              <papertitle color="#1772d0">Improved Algorithms for Neural Active Learning</papertitle>
+              <br>
+              Yikun Ban*, <strong>Yuheng Zhang*</strong>, Hanghang Tong, Arindam Banerjee, Jingrui He
+              <br>
+              <em>NeurIPS 2022</em>
+              <br>
+            </td>
+          </tr>
+
+          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <td valign="middle" width="100%">
+              <papertitle color="#1772d0">Active Heterogeneous Graph Neural Network with Per-step Meta-Q-Learning</papertitle>
+              <br>
+              <strong>Yuheng Zhang</strong>, Yinglong Xia, Yan Zhu, Yuejie Chi, Lei Ying, Hanghang Tong
+              <br>
+              <em>ICDM 2022 (<b>Student Travel Award</b>)</em>
+              <br>
+            </td>
+          </tr>
+
+          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <td valign="middle" width="100%">
+                <papertitle color="#1772d0">Batch Active Learning with Graph Neural Networks via Multi-Agent Deep Reinforcement Learning</papertitle>
+              <br>
+              <strong>Yuheng Zhang</strong>, Hanghang Tong, Yinglong Xia, Yan Zhu, Yuejie Chi, Lei Ying
+              <br>
+              <em>AAAI 2022 (<b>Oral, Top 5%</b>)</em>
+              <br>
+            </td>
+          </tr>
+
+          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <td valign="middle" width="100%">
+                <papertitle color="#1772d0">Improving Robustness to Model Inversion Attacks via Mutual Information Regularization</papertitle>
+              <br>
+              Tianhao Wang*, <strong>Yuheng Zhang*</strong>, Ruoxi Jia
+              <br>
+              <em>AAAI 2021</em>
+              <br>
+            </td>
+          </tr>
+
+           <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <td valign="middle" width="100%">
+                <papertitle color="#1772d0">The Secret Revealer: Generative Model-Inversion Attacks Against Deep Neural Networks</papertitle>
+              <br>
+              <strong>Yuheng Zhang*</strong>, Ruoxi Jia*, Hengzhi Pei, Wenxiao Wang, Bo Li, Dawn Song
+              <br>
+              <em>CVPR 2020 (<b>Oral, Top 5%</b>)</em>
+              <br>
+            </td>
+          </tr>
+
+          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <td valign="middle" width="100%">
+                <papertitle color="#1772d0">Convolutional Ordinal Regression Forest for Image Ordinal Estimation</papertitle>
+              <br>
+              Haiping Zhu, Hongming Shan, <strong>Yuheng Zhang</strong>, Lingfu Che, Xiaoyang Xu, Junping Zhang, Jianbo Shi, Fei-Yue Wang
+              <br>
+              <em>IEEE Transactions on Neural Networks and Learning Systems, 2021</em>
+              <br>
+            </td>
+          </tr>
+
+          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
+            <td valign="middle" width="100%">
+                <papertitle color="#1772d0">Ordinal Distribution Regression for Gait-based Age Estimation</papertitle>
+              <br>
+              Haiping Zhu, <strong>Yuheng Zhang</strong>, Guohao Li, Junping Zhang, Hongming Shan
+              <br>
+              <em>Science China Information Sciences, 2020</em>
+              <br>
+            </td>
+          </tr>
+
+         
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+          <tr>
+            <td width="100%" valign="middle">
+              <heading>Teaching</heading>
+              <p>
+                Teaching Assistant, CS412: Introduction to Data Mining, Hanghang Tong. UIUC, Spring 2022.
+              </p>
+            </td>
+          </tr>
+        </table>
+          
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+          <tr>
+            <td width="100%" valign="middle">
+              <heading>Awards</heading>
+              <p>
+                <b>David J. Kuck Outstanding MS Thesis Award</b>, 2022
+              </p>
+              <p>
+                ICDM Student Travel Award, 2022
+              </p>
+               <p>
+                UIUC Graduate College Conference Presentation Award, 2022
+              </p>
+              <p>
+                CIKM 2021 Best Reviewers Award, 2021
+              <p>
+                Honor Student Award in Top Talent Undergraduate Training Program, 2020
+              </p>
+              <p>
+                <b>Outstanding Undergraduates Graduates of Shanghai</b>, 2020
+              </p>
+              <p>
+                3rd place of International Challenge on Activity Recognition (ActivityNet Captions), 2020
+              </p>
+              <p>
+                <b>Wish Scholarship (2 out of 155)</b>, 2019
+              </p>
+              <p>
+                <b>Gold Medal</b>, ACM-ICPC Asia Regional Contest NanNing Site, 2017
+              </p>
+              <p>
+                HUAWEI Scholarship, 2017 (Top 5%)
+              </p>
+              <p>
+                Bronze Medal, National Olympiad in Informatics, National Finals, 2015
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tbody>
+              <tr>
+                  <td style="padding:0px">
+                      <p font-size:small;>
+                          <br>
+                          <br>
+                          <div style="float:left;">
+                          Updated at July 2023 
+                          </div>
+                          <div style="float:right;">
+                          <a href="https://jonbarron.info">Template</a>
+                          </div>
+                          <br>
+                          <br>        
+                      </p>                           
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

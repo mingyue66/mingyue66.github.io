@@ -1,8 +1,0 @@
-#template:
-# - name: lalala
-# url: 
-# src: 
-
-- name: 码志
-  url: http://mazhuang.org
-  src: life
