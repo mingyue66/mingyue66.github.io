@@ -1,0 +1,173 @@
+{
+  "name": "Mingyue Huo",
+  "chinese_name": "霍明月",
+  "email": "mhuo5@illinois.edu",
+  "updated": "2026-10-08",
+  "description": "Mingyue Huo is a PhD candidate at UIUC working on speech and multimodal AI, foundation-model evaluation, and multi-speaker understanding.",
+  "scholar": "https://scholar.google.com/citations?user=r5URsrYAAAAJ&hl=en",
+  "github": "https://github.com/mingyue66",
+  "linkedin": "https://www.linkedin.com/in/mingyue-huo-5a7395224/",
+  "cv": "file/CV_MingyueHuo.pdf",
+  "bio": [
+    "I am a PhD candidate in Computational Linguistics at the University of Illinois Urbana-Champaign, advised by Prof. Yan Tang. I expect to graduate in December 2026.",
+    "My research focuses on speech and multimodal AI. I work on foundation-model evaluation and post-training, drawing on speech representation learning, multi-speaker understanding, and human speech perception.",
+    "This fall, I am a research intern at Mitsubishi Electric Research Laboratories (MERL), working on long-form audio understanding. Previously, I interned at Netflix, Tencent AI Lab, Amazon Prime Video, and ByteDance AI Lab."
+  ],
+  "availability": "I am seeking full-time Research Scientist roles and am available in Fall 2026.",
+  "interests": [
+    "Evaluating and improving speech and audio-language models",
+    "Multi-speaker ASR, diarization, and target speech extraction",
+    "Speech representations and human-aligned speech understanding"
+  ],
+  "education": [
+    {
+      "degree": "PhD, Computational Linguistics",
+      "school": "University of Illinois Urbana-Champaign",
+      "date": "Expected December 2026"
+    },
+    {
+      "degree": "MS, Applied Statistics",
+      "school": "University of Illinois Urbana-Champaign",
+      "date": "May 2026"
+    },
+    {
+      "degree": "MA, Japanese Linguistics",
+      "school": "University of Illinois Urbana-Champaign",
+      "date": "May 2022"
+    },
+    {
+      "degree": "BA, Japanese",
+      "school": "Shanghai International Studies University",
+      "date": "June 2020"
+    },
+    {
+      "degree": "Exchange student",
+      "school": "Hosei University, Tokyo",
+      "date": "2018"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Research Intern",
+      "company": "Mitsubishi Electric Research Laboratories (MERL)",
+      "date": "Fall 2026",
+      "text": "Long-form audio understanding in real-world multi-speaker meetings."
+    },
+    {
+      "role": "Research Scientist Intern",
+      "company": "Netflix",
+      "date": "Summer 2026",
+      "text": "Diagnostic audio LLM judges, human preference supervision, and post-training for cross-lingual speech generation."
+    },
+    {
+      "role": "Research Scientist Intern",
+      "company": "Tencent AI Lab",
+      "date": "Summer 2025",
+      "text": "General-purpose speech representations and audio-language understanding; contributions to the Auden toolkit."
+    },
+    {
+      "role": "Applied Scientist Intern",
+      "company": "Amazon Prime Video",
+      "date": "Summer 2024",
+      "text": "Text-guided target speech extraction and the TextrolMix dataset."
+    },
+    {
+      "role": "Linguist Intern",
+      "company": "ByteDance AI Lab",
+      "date": "December 2019 – July 2021",
+      "text": "Mandarin and Japanese text-to-speech, singing synthesis, and perceptual evaluation."
+    }
+  ],
+  "awards": [
+    {
+      "name": "Graduate College Dissertation Completion Fellowship, UIUC",
+      "date": "2026–2027"
+    },
+    {
+      "name": "Conference Travel Award, UIUC Linguistics",
+      "date": "2025"
+    },
+    {
+      "name": "C. W. Kim Research Award in Linguistics, UIUC",
+      "date": "2024"
+    },
+    {
+      "name": "Linguistics Student Leadership Award, UIUC",
+      "date": "2024"
+    },
+    {
+      "name": "Midwest Speech and Language Days Travel Award",
+      "date": "2024"
+    },
+    {
+      "name": "Best Japanese TA, UIUC",
+      "date": "2022"
+    },
+    {
+      "name": "EALC Summer Research Fellowship, UIUC",
+      "date": "2021"
+    },
+    {
+      "name": "Teachers Ranked as Excellent by Their Students, UIUC",
+      "date": "Fall 2020 & Fall 2021"
+    }
+  ],
+  "service": [
+    "Reviewer: ICASSP 2026, Interspeech 2025 & 2026, SLT 2026.",
+    "Student volunteer: Interspeech 2021 and NeurIPS 2023."
+  ],
+  "projects": [
+    {
+      "id": "speechcritic",
+      "name": "SpeechCritic",
+      "subtitle": "A diagnostic speech judge",
+      "text": "Comparing generated speech across perceptual dimensions, with acoustic evidence and limited human preference supervision.",
+      "links": {
+        "Paper": "https://arxiv.org/abs/2609.34582",
+        "Demo": "https://mingyue66.github.io/SpeechCritic/"
+      }
+    },
+    {
+      "id": "speechjudgeaudit",
+      "name": "SpeechJudgeAudit",
+      "subtitle": "Auditing speech LLM judges",
+      "text": "Controlled stimuli and evaluation tools for studying how loudness, content, and emotional delivery affect speech judgments.",
+      "links": {
+        "Paper": "https://arxiv.org/abs/2609.36979",
+        "Benchmark": "https://huggingface.co/datasets/mingyue66/SpeechJudgeAudit"
+      }
+    },
+    {
+      "id": "tagspeech",
+      "name": "TagSpeech",
+      "subtitle": "Who spoke what, and when",
+      "text": "End-to-end multi-speaker ASR and diarization with fine-grained timestamps. Includes examples for meeting transcription.",
+      "links": {
+        "Paper": "https://aclanthology.org/2026.acl-long.1938/",
+        "Code & demos": "https://github.com/AudenAI/Auden/tree/main/examples/tagspeech",
+        "Model": "https://huggingface.co/AudenAI/TagSpeech-AMI"
+      }
+    },
+    {
+      "id": "auden",
+      "name": "Auden-Voice",
+      "subtitle": "General-purpose voice representations",
+      "text": "A speech encoder for speaker identity, paralinguistic information, and audio-language understanding, released through Auden.",
+      "links": {
+        "Paper": "https://arxiv.org/abs/2511.15145",
+        "Code": "https://github.com/AudenAI/Auden/tree/main/examples/voice",
+        "Model": "https://huggingface.co/AudenAI/auden-encoder-voice"
+      }
+    },
+    {
+      "id": "styletse",
+      "name": "StyleTSE / TextrolMix",
+      "subtitle": "Extracting speech with natural language",
+      "text": "Target speech extraction using descriptions of speaking style, together with a speech-mixture and text-description dataset.",
+      "links": {
+        "Paper": "https://arxiv.org/abs/2501.09169",
+        "Audio demos": "https://mingyue66.github.io/TextrolMix/demo/"
+      }
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+[
+  {
+    "id": "2609.36979",
+    "title": "Louder, Longer, Livelier: Acoustic Shortcuts and Underspecified Rationales in Speech LLM Judges",
+    "authors": [
+      "Mingyue Huo",
+      "Shivam Mehta",
+      "Bhavin Jawade",
+      "Yinghong Lan",
+      "Haoqi Li"
+    ],
+    "year": 2026,
+    "date": "2026-09-29",
+    "venue": "arXiv preprint",
+    "arxiv": "2609.36979",
+    "links": {
+      "arXiv": "https://arxiv.org/abs/2609.36979",
+      "Benchmark": "https://huggingface.co/datasets/mingyue66/SpeechJudgeAudit"
+    },
+    "equal_contribution": [],
+    "sources": [
+      "https://arxiv.org/abs/2609.36979"
+    ]
+  },
+  {
+    "id": "2609.34582",
+    "title": "SpeechCritic: Learning a Diagnostic Speech Judge from Limited Human Preferences",
+    "authors": [
+      "Mingyue Huo",
+      "Shivam Mehta",
+      "Bhavin Jawade",
+      "Yinghong Lan",
+      "Haoqi Li"
+    ],
+    "year": 2026,
+    "date": "2026-09-28",
+    "venue": "arXiv preprint",
+    "arxiv": "2609.34582",
+    "links": {
+      "arXiv": "https://arxiv.org/abs/2609.34582",
+      "Demo": "https://mingyue66.github.io/SpeechCritic/"
+    },
+    "equal_contribution": [],
+    "sources": [
+      "https://arxiv.org/abs/2609.34582"
+    ]
+  },
+  {
+    "id": "sesr",
+    "title": "SESR: A Sound Event Structure Reward for Fine-grained Text-to-audio Alignment",
+    "authors": [
+      "Haoyu Zhang",
+      "Mingyue Huo",
+      "Dong Yang",
+      "Kiyoshi Kurihara",
+      "Irene Li",
+      "Yusuke Iwasawa",
+      "Yutaka Matsuo"
+    ],
+    "year": 2026,
+    "date": "2026-09-20",
+    "venue": "Manuscript in submission",
+    "links": {},
+    "sources": [
+      "CV_MingyueHuo_UIUC.pdf (September 2026)"
+    ]
+  },
+  {
+    "id": "2607.11157",
+    "title": "Where Speech Enhancement Hurts Recognition: An Inference Time Polar Projection Diagnosis",
+    "authors": [
+      "Mingyue Huo",
+      "Yuheng Zhang",
+      "Hao Zhang"
+    ],
+    "year": 2026,
+    "date": "2026-07-13",
+    "venue": "arXiv preprint",
+    "arxiv": "2607.11157",
+    "links": {
+      "arXiv": "https://arxiv.org/abs/2607.11157"
+    },
+    "equal_contribution": [],
+    "sources": [
+      "https://arxiv.org/abs/2607.11157"
+    ]
+  },
+  {
+    "id": "2604.02686",
+    "title": "Beyond Semantic Manipulation: Token-Space Attacks on Reward Models",
+    "authors": [
+      "Yuheng Zhang",
+      "Mingyue Huo",
+      "Minghao Zhu",
+      "Mengxue Zhang",
+      "Nan Jiang"
+    ],
+    "year": 2026,
+    "date": "2026-04-03",
+    "venue": "arXiv preprint",
+    "arxiv": "2604.02686",
+    "links": {
+      "arXiv": "https://arxiv.org/abs/2604.02686"
+    },
+    "equal_contribution": [
+      "Yuheng Zhang",
+      "Mingyue Huo"
+    ],
+    "sources": [
+      "https://arxiv.org/abs/2604.02686"
+    ]
+  },
+  {
+    "id": "listening",
+    "title": "What makes listening comprehension difficult?: A feature-based machine learning approach to understanding item difficulty",
+    "authors": [
+      "Huiying Cai",
+      "Xun Yan",
+      "Ping-Lin Chuang",
+      "Yulin Pan",
+      "Mingyue Huo"
+    ],
+    "year": 2026,
+    "date": "2026-04-01",
+    "venue": "Applied Linguistics 47(2), 406–428 · Online first: 2025",
+    "links": {
+      "Paper": "https://academic.oup.com/applij/article/47/2/406/8341053"
+    },
+    "sources": [
+      "https://academic.oup.com/applij/article/47/2/406/8341053"
+    ]
+  },
+  {
+    "id": "2601.06896",
+    "title": "TagSpeech: End-to-End Multi-Speaker ASR and Diarization with Fine-Grained Temporal Grounding",
+    "authors": [
+      "Mingyue Huo",
+      "Yiwen Shao",
+      "Yuheng Zhang"
+    ],
+    "year": 2026,
+    "date": "2026-01-11",
+    "venue": "ACL 2026 · Main conference · Oral",
+    "arxiv": "2601.06896",
+    "links": {
+      "arXiv": "https://arxiv.org/abs/2601.06896",
+      "Paper": "https://aclanthology.org/2026.acl-long.1938/",
+      "Code & demos": "https://github.com/AudenAI/Auden/tree/main/examples/tagspeech",
+      "Model": "https://huggingface.co/AudenAI/TagSpeech-AMI"
+    },
+    "equal_contribution": [],
+    "sources": [
+      "https://arxiv.org/abs/2601.06896"
+    ]
+  },
+  {
+    "id": "2511.16757",
+    "title": "Revisiting Audio-language Pretraining for Learning General-purpose Audio Representation",
+    "authors": [
+      "Wei-Cheng Tseng",
+      "Xuanru Zhou",
+      "Mingyue Huo",
+      "Yiwen Shao",
+      "Hao Zhang",
+      "Dong Yu"
+    ],
+    "year": 2026,
+    "date": "2025-11-20",
+    "venue": "ACL 2026 · Main conference",
+    "arxiv": "2511.16757",
+    "links": {
+      "arXiv": "https://arxiv.org/abs/2511.16757",
+      "Paper": "https://aclanthology.org/2026.acl-long.1581/",
+      "Code": "https://github.com/AudenAI/Auden"
+    },
+    "equal_contribution": [],
+    "sources": [
+      "https://arxiv.org/abs/2511.16757"
+    ]
+  },
+  {
+    "id": "2511.15145",
+    "title": "Auden-Voice: General-Purpose Voice Encoder for Speech and Language Understanding",
+    "authors": [
+      "Mingyue Huo",
+      "Wei-Cheng Tseng",
+      "Yiwen Shao",
+      "Hao Zhang",
+      "Dong Yu"
+    ],
+    "year": 2026,
+    "date": "2025-11-19",
+    "venue": "ICASSP 2026",
+    "arxiv": "2511.15145",
+    "links": {
+      "arXiv": "https://arxiv.org/abs/2511.15145",
+      "Code": "https://github.com/AudenAI/Auden/tree/main/examples/voice",
+      "Model": "https://huggingface.co/AudenAI/auden-encoder-voice"
+    },
+    "equal_contribution": [],
+    "sources": [
+      "https://arxiv.org/abs/2511.15145"
+    ]
+  },
+  {
+    "id": "2509.07195",
+    "title": "Identifying and Calibrating Overconfidence in Noisy Speech Recognition",
+    "authors": [
+      "Mingyue Huo",
+      "Yuheng Zhang",
+      "Yan Tang"
+    ],
+    "year": 2025,
+    "date": "2025-09-08",
+    "venue": "ASRU 2025",
+    "arxiv": "2509.07195",
+    "links": {
+      "arXiv": "https://arxiv.org/abs/2509.07195"
+    },
+    "equal_contribution": [],
+    "sources": [
+      "https://arxiv.org/abs/2509.07195"
+    ]
+  },
+  {
+    "id": "2501.09169",
+    "title": "Beyond Speaker Identity: Text Guided Target Speech Extraction",
+    "authors": [
+      "Mingyue Huo",
+      "Abhinav Jain",
+      "Cong Phuoc Huynh",
+      "Fanjie Kong",
+      "Pichao Wang",
+      "Zhu Liu",
+      "Vimal Bhat"
+    ],
+    "year": 2025,
+    "date": "2025-01-15",
+    "venue": "ICASSP 2025",
+    "arxiv": "2501.09169",
+    "links": {
+      "arXiv": "https://arxiv.org/abs/2501.09169",
+      "Demo": "https://mingyue66.github.io/TextrolMix/demo/"
+    },
+    "equal_contribution": [],
+    "sources": [
+      "https://arxiv.org/abs/2501.09169"
+    ]
+  },
+  {
+    "id": "2407.00617",
+    "title": "Iterative Nash Policy Optimization: Aligning LLMs with General Preferences via No-Regret Learning",
+    "authors": [
+      "Yuheng Zhang",
+      "Dian Yu",
+      "Baolin Peng",
+      "Linfeng Song",
+      "Ye Tian",
+      "Mingyue Huo",
+      "Nan Jiang",
+      "Haitao Mi",
+      "Dong Yu"
+    ],
+    "year": 2025,
+    "date": "2024-06-30",
+    "venue": "ICLR 2025 · Oral",
+    "arxiv": "2407.00617",
+    "links": {
+      "arXiv": "https://arxiv.org/abs/2407.00617",
+      "Paper": "https://openreview.net/forum?id=Pujt3ADZgI"
+    },
+    "equal_contribution": [],
+    "sources": [
+      "https://arxiv.org/abs/2407.00617"
+    ]
+  },
+  {
+    "id": "masking",
+    "title": "Release from same-talker speech-in-speech masking: Effects of masker intelligibility and other contributing factors",
+    "authors": [
+      "Mingyue Huo",
+      "Yinglun Sun",
+      "Daniel Fogerty",
+      "Yan Tang"
+    ],
+    "year": 2024,
+    "date": "2024-11-01",
+    "venue": "The Journal of the Acoustical Society of America 156(5), 2960–2973",
+    "links": {
+      "Paper": "https://pubs.aip.org/asa/jasa/article/156/5/2960/3318563/Release-from-same-talker-speech-in-speech-masking",
+      "DOI": "https://doi.org/10.1121/10.0034235"
+    },
+    "sources": [
+      "CV_MingyueHuo_UIUC.pdf (September 2026)",
+      "https://experts.illinois.edu/en/publications/release-from-same-talker-speech-in-speech-masking-effects-of-mask/"
+    ]
+  },
+  {
+    "id": "informational",
+    "title": "Quantifying Informational Masking due to Masker Intelligibility in Same-talker Speech-in-speech Perception",
+    "authors": [
+      "Mingyue Huo",
+      "Yinglun Sun",
+      "Daniel Fogerty",
+      "Yan Tang"
+    ],
+    "year": 2023,
+    "date": "2023-08-20",
+    "venue": "Interspeech 2023 · Oral",
+    "links": {
+      "Paper": "https://www.isca-archive.org/interspeech_2023/huo23_interspeech.html"
+    },
+    "sources": [
+      "CV_MingyueHuo_UIUC.pdf (September 2026)"
+    ]
+  },
+  {
+    "id": "teaching-emotions",
+    "title": "Towards Automating the Assessment of Teachers’ Teaching Emotions in Preschool Classrooms",
+    "authors": [
+      "Mingyue Huo",
+      "Yan Tang"
+    ],
+    "year": 2023,
+    "date": "2023-08-07",
+    "venue": "ICPhS 2023",
+    "links": {
+      "PDF": "https://www.internationalphoneticassociation.org/icphs-proceedings/ICPhS2023/full_papers/16.pdf"
+    },
+    "sources": [
+      "CV_MingyueHuo_UIUC.pdf (September 2026)",
+      "https://www.internationalphoneticassociation.org/icphs-proceedings/ICPhS2023/full_papers/16.pdf"
+    ]
+  }
+]
