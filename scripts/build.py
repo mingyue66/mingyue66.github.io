@@ -123,12 +123,14 @@ def projects():
     items=''.join(f'<article class="project" id="{esc(p["id"])}"><h2>{esc(p["name"])}</h2><p class="project-subtitle">{esc(p["subtitle"])}</p><p>{esc(p["text"])}</p>{project_keywords(p)}{project_figure(p,"../")}<p class="paper-links">{links(p["links"])}</p></article>' for p in profile['projects'])
     return '<h1>Projects</h1><p class="page-intro">Research systems, open-source work, and demos for speech and audio understanding.</p>'+items
 def cv():
+    cv_version=hashlib.sha256((ROOT/profile['cv']).read_bytes()).hexdigest()[:10]
+    cv_url='../'+profile['cv']+'?v='+cv_version
     edu=''.join(f'<li><div><strong>{esc(p["degree"])}</strong><p>{esc(p["school"])}</p></div><span class="date">{esc(p["date"])}</span></li>' for p in profile['education'])
     exp=''.join(f'<li><div><strong>{esc(p["company"])}</strong><p>{esc(p["role"])}</p><p class="muted">{esc(p["text"])}</p></div><span class="date">{esc(p["date"])}</span></li>' for p in profile['experience'])
     awards=''.join(f'<li><div>{esc(p["name"])}</div><span class="date">{esc(p["date"])}</span></li>' for p in profile['awards'])
     service=''.join(f'<li>{esc(p)}</li>' for p in profile['service'])
     return f'''<h1>Curriculum Vitae</h1><p class="page-intro">A short overview of my education, research experience, and service.</p>
-<p>{link('../'+profile['cv'],'Download CV (PDF) ↓')} <span class="muted">· September 2026</span></p>
+<p>{link(cv_url,'Download CV (PDF) ↓')} <span class="muted">· {esc(profile['cv_updated'])}</span></p>
 <section class="section"><h2>Education</h2><ul class="record-list">{edu}</ul></section>
 <section class="section"><h2>Industry Research</h2><ul class="record-list">{exp}</ul></section>
 <section class="section"><h2>Selected Awards</h2><ul class="record-list awards">{awards}</ul></section>

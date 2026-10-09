@@ -7,6 +7,7 @@ A minimal academic homepage for `mingyue66.github.io`. Four static pages, one sh
 - 简介、联系方式、教育、实习和项目：`content/profile.json`
 - 论文题目、作者、年份、发表状态和链接：`content/publications.json`
 - 下载的简历：`file/CV_MingyueHuo.pdf`
+- 简历月份：`content/profile.json` 的 `cv_updated`；下载链接根据 PDF 内容生成版本号，避免旧文件缓存。
 - 排版样式：`stylesheet.css`
 
 编辑内容后，在仓库根目录运行：
@@ -39,7 +40,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 - Auden-Voice 的 ICASSP 2026 状态：最新 CV 与会议官方日程。
 - Applied Linguistics 论文：正式卷期是 2026 年，online-first 为 2025 年；按用户要求放在 2025 年列表最后，保留卷期与 online-first 信息。
 - 肖像来自用户的 UIUC 公开个人资料；原来的动漫图片仍保留在 `images/go.jpg`。
-- 最新 PDF 原样保存；旧 PDF 路径继续保留，避免既有外部链接失效。
+- 最新 PDF 使用用户提供的 2026 年 10 月版本，原样保存；旧 PDF 路径继续保留，避免既有外部链接失效。
 
 ### 主要来源
 
