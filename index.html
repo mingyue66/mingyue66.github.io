@@ -19,7 +19,7 @@
   <div class="site">
     <header class="site-header">
       <h1 class="site-name"><a href="./">Mingyue Huo <span lang="zh">霍明月</span></a></h1>
-      <nav aria-label="Main navigation"><a href="./" aria-current="page">Home</a> <a href="publications/">Publications</a> <a href="projects/">Projects</a> <a href="cv/">CV</a></nav>
+      <nav aria-label="Main navigation"><a href="./" aria-current="page">Home</a> <a href="publications/">Publications</a> <a href="cv/">CV</a></nav>
     </header>
     <main id="main">
 <section class="intro" aria-label="About Mingyue">
@@ -27,17 +27,17 @@
 <p>I am a PhD candidate in Computational Linguistics at the University of Illinois Urbana-Champaign, advised by Prof. Yan Tang. I expect to graduate in December 2026.</p>
 <p>My research focuses on speech and multimodal AI. I work on foundation-model evaluation and post-training, drawing on speech representation learning, multi-speaker understanding, and human speech perception.</p>
 <p>This fall, I am a research intern at Mitsubishi Electric Research Laboratories (MERL), working on long-form audio understanding. Previously, I interned at Netflix, Tencent AI Lab, Amazon Prime Video, and ByteDance AI Lab.</p>
-<p class="availability">I am seeking full-time Research Scientist roles and am available in mid-December 2026. <a href="mailto:mhuo5@illinois.edu">Please get in touch.</a></p>
+<p class="availability">I am seeking full-time Research Scientist or Applied Scientist roles and am available in mid-December 2026. <a href="mailto:mhuo5@illinois.edu">Please get in touch.</a></p>
 <p class="contact-links"><a href="https://scholar.google.com/citations?user=r5URsrYAAAAJ&amp;hl=en">Google Scholar</a> <span aria-hidden="true">/</span> <a href="https://github.com/mingyue66">GitHub</a> <span aria-hidden="true">/</span> <a href="https://www.linkedin.com/in/mingyue-huo-5a7395224/">LinkedIn</a> <span aria-hidden="true">/</span> <a href="mailto:mhuo5@illinois.edu">mhuo5@illinois.edu</a></p>
 </section>
-<section class="section" aria-labelledby="research-title"><h2 id="research-title">Research Interests</h2><ul class="plain-list"><li>Multimodal foundation models and audio-language understanding</li><li>Post-training and alignment: supervised fine-tuning, on-policy distillation, and reinforcement learning</li><li>Human-aligned evaluation, LLM-as-Judge, and reward modeling</li><li>Representation learning and end-to-end multi-speaker understanding</li></ul></section>
+<section class="section" aria-labelledby="research-title"><h2 id="research-title">Research Interests</h2><ul class="plain-list"><li>Multimodal foundation models; post-training and alignment: supervised fine-tuning, on-policy distillation, and reinforcement learning</li><li>End-to-end multi-speaker understanding and speech representation learning</li><li>Human-aligned evaluation, LLM-as-Judge, and reward modeling</li></ul></section>
 <section class="section" aria-labelledby="news-title"><h2 id="news-title">Recent News</h2>
 <ul class="news-list">
 <li><time datetime="2026-09">Sep 2026</time><span>New preprints from my Netflix internship: <a href="https://arxiv.org/abs/2609.34582">SpeechCritic</a> and <a href="https://arxiv.org/abs/2609.36979">Louder, Longer, Livelier</a> on human-aligned speech evaluation.</span></li>
 <li><time datetime="2026-09">Sep 2026</time><span>Received the <a href="https://linguistics.illinois.edu/news/2026-09-01/congratulations-grad-student-award-and-grant-recipients">UIUC Graduate College Dissertation Completion Fellowship</a> for 2026–2027.</span></li>
 <li><time datetime="2026-07">Jul 2026</time><span><a href="https://aclanthology.org/2026.acl-long.1938/">TagSpeech</a> presented as a main-conference oral at ACL 2026.</span></li>
 </ul></section>
-<section class="section" aria-labelledby="highlights-title"><div class="section-heading"><h2 id="highlights-title">Highlighted Projects</h2><a href="projects/">All projects →</a></div><article class="highlighted-project" id="highlight-speechcritic">
+<section class="section" aria-labelledby="highlights-title"><h2 id="highlights-title">Highlighted Projects</h2><article class="highlighted-project" id="highlight-speechcritic">
 <h3><a href="https://arxiv.org/abs/2609.34582">SpeechCritic</a></h3>
 <p class="project-subtitle">Diagnostic audio LLM judges from limited human preferences</p>
 <p class="project-description">Developed during my Netflix internship, SpeechCritic combines human-calibrated supervision with SFT, OPD, and RL to train and evaluate diagnostic speech judges across perceptual dimensions.</p>
@@ -66,10 +66,29 @@
 </article><article class="highlighted-project" id="highlight-auden">
 <h3><a href="https://arxiv.org/abs/2511.15145">Auden-Voice</a></h3>
 <p class="project-subtitle">General-purpose voice representations</p>
-<p class="project-description">A speech encoder for speaker identity, paralinguistic information, and audio-language understanding, released through Auden.</p>
-<ul class="keywords" aria-label="Project keywords"><li>Representation learning</li><li>Multimodal AI</li><li>Paralinguistics</li><li>Multi-task learning</li></ul>
-
+<p class="project-description">A general-purpose voice encoder for speaker identity, paralinguistic understanding, and LLM-QA, with multi-task and contrastive learning experiments and open-source training recipes in Auden.</p>
+<ul class="keywords" aria-label="Project keywords"><li>Representation learning</li><li>Speaker embedding</li><li>Speaker verification</li><li>LLM-QA</li><li>Contrastive learning</li><li>Multi-task learning</li><li>Paralinguistics</li></ul>
+<figure class="project-figure">
+<a class="figure-link" href="assets/auden-voice-figure1.webp" target="_blank" rel="noopener" aria-label="Open Auden-Voice Figure 1 at full resolution">
+<svg viewBox="65 205 1188 461" role="img" aria-label="Auden-Voice Figure 1: a Zipformer voice encoder and evaluation setups for linear probing, speaker verification, diarization, speech-text retrieval, zero-shot classification, and LLM question answering" xmlns="http://www.w3.org/2000/svg">
+<image href="assets/auden-voice-figure1.webp" width="1320" height="1020" />
+</svg></a>
+<figcaption>Figure 1 · Auden-Voice: voice encoder and speech-language evaluation. <a href="assets/auden-voice-figure1.webp" target="_blank" rel="noopener">View full figure ↗</a></figcaption>
+</figure>
 <p class="paper-links"><a href="https://arxiv.org/abs/2511.15145">Paper</a> <span aria-hidden="true">/</span> <a href="https://github.com/AudenAI/Auden/tree/main/examples/voice">Code</a> <span aria-hidden="true">/</span> <a href="https://huggingface.co/AudenAI/auden-encoder-voice">Model</a></p>
+</article><article class="highlighted-project" id="highlight-styletse">
+<h3><a href="https://arxiv.org/abs/2501.09169">StyleTSE</a></h3>
+<p class="project-subtitle">Text-guided target speech extraction · ICASSP 2025</p>
+<p class="project-description">Developed during my Amazon Prime Video internship, StyleTSE extracts target speech from mixtures using natural-language descriptions and optional audio clues. TextrolMix supplies paired speech mixtures and speaking-style descriptions.</p>
+<ul class="keywords" aria-label="Project keywords"><li>Target speech extraction</li><li>Speech separation</li><li>Multimodal learning</li><li>Text-audio fusion</li><li>Dataset construction</li></ul>
+<figure class="project-figure">
+<a class="figure-link" href="assets/styletse-figure1.webp" target="_blank" rel="noopener" aria-label="Open StyleTSE Figure 1 at full resolution">
+<svg viewBox="68 435 1190 355" role="img" aria-label="StyleTSE Figure 1: a separation network conditioned on text and audio clues, with attention pooling and gated multimodal fusion" xmlns="http://www.w3.org/2000/svg">
+<image href="assets/styletse-figure1.webp" width="1320" height="1020" />
+</svg></a>
+<figcaption>Figure 1 · StyleTSE: speech separation with text and audio clues. <a href="assets/styletse-figure1.webp" target="_blank" rel="noopener">View full figure ↗</a></figcaption>
+</figure>
+<p class="paper-links"><a href="https://arxiv.org/abs/2501.09169">Paper</a> <span aria-hidden="true">/</span> <a href="https://mingyue66.github.io/TextrolMix/demo/">Audio demos</a> <span aria-hidden="true">/</span> <a href="https://github.com/mingyue66/TextrolMix/">Dataset</a></p>
 </article></section>
     </main>
     <footer class="site-footer">

@@ -1,6 +1,6 @@
 # Mingyue Huo — personal homepage
 
-A minimal academic homepage for `mingyue66.github.io`. Four static pages, one shared stylesheet, system fonts, and no client-side JavaScript or third-party tracking. The homepage highlights projects with paper figures and research keywords.
+A minimal academic homepage for `mingyue66.github.io`. Three static pages, one shared stylesheet, system fonts, and no client-side JavaScript or third-party tracking. The homepage highlights projects with paper figures and research keywords. The former Projects URL redirects to the homepage highlights.
 
 ## 更新内容
 
@@ -16,7 +16,7 @@ A minimal academic homepage for `mingyue66.github.io`. Four static pages, one sh
 python3 scripts/build.py
 ```
 
-生成的 `index.html`、`publications/index.html`、`projects/index.html`、`cv/index.html` 一起提交到 GitHub。发布无需安装依赖或运行服务；GitHub Pages 直接读取已生成的静态文件。生成器只使用 Python 标准库。
+生成的 `index.html`、`publications/index.html`、`cv/index.html` 及旧 Projects 地址的跳转页 `projects/index.html` 一起提交到 GitHub。发布无需安装依赖或运行服务；GitHub Pages 直接读取已生成的静态文件。生成器只使用 Python 标准库。
 
 本地预览：
 
@@ -55,9 +55,11 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 ## 项目图与关键词
 
-`content/profile.json` 的 `highlights` 决定首页项目顺序，项目中的 `keywords` 与 `figure` 同步用于首页和 Projects 页。
+`content/profile.json` 的 `highlights` 决定首页项目顺序，项目中的 `keywords` 与 `figure` 用于首页展示。导航只保留 Home、Publications 和 CV。
 
 - SpeechCritic：Figure 1，来源 https://arxiv.org/html/2609.34582v1/Fig1.png
 - TagSpeech：Figure 2，来源 https://arxiv.org/html/2601.06896v2/model_structure.png
+- Auden-Voice：Figure 1，来源 https://arxiv.org/html/2511.15145v1/Figure1_final.png
+- StyleTSE（ICASSP 2025）：Figure 1，来源 https://arxiv.org/html/2501.09169v1/x1.png
 
 原论文图片无损转换为 WebP；SVG 的 viewBox 仅将周围空白移出显示范围，原图内容保留，点击可查看完整原图。

@@ -3,43 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <title>Projects | Mingyue Huo</title>
-  <meta name="description" content="Projects of Mingyue Huo, PhD candidate at UIUC working on speech and multimodal AI.">
-  <link rel="canonical" href="https://mingyue66.github.io/projects/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Projects | Mingyue Huo">
-  <meta property="og:description" content="Projects of Mingyue Huo, PhD candidate at UIUC working on speech and multimodal AI.">
-  <meta property="og:url" content="https://mingyue66.github.io/projects/">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../stylesheet.css?v=657895d94a">
+  <meta http-equiv="refresh" content="0; url=../#highlights-title">
+  <link rel="canonical" href="https://mingyue66.github.io/#highlights-title">
+  <title>Research projects | Mingyue Huo</title>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="site">
-    <header class="site-header">
-      <p class="site-name"><a href=".././">Mingyue Huo <span lang="zh">霍明月</span></a></p>
-      <nav aria-label="Main navigation"><a href=".././">Home</a> <a href="../publications/">Publications</a> <a href="../projects/" aria-current="page">Projects</a> <a href="../cv/">CV</a></nav>
-    </header>
-    <main id="main">
-<h1>Projects</h1><p class="page-intro">Research systems, open-source work, and demos for speech and audio understanding.</p><article class="project" id="speechcritic"><h2>SpeechCritic</h2><p class="project-subtitle">Diagnostic audio LLM judges from limited human preferences</p><p>Developed during my Netflix internship, SpeechCritic combines human-calibrated supervision with SFT, OPD, and RL to train and evaluate diagnostic speech judges across perceptual dimensions.</p><ul class="keywords" aria-label="Project keywords"><li>LLM-as-Judge</li><li>Evaluation</li><li>SFT</li><li>OPD</li><li>RL</li><li>Human preferences</li><li>Multimodal AI</li></ul><figure class="project-figure">
-<a class="figure-link" href="../assets/speechcritic-figure1.webp" target="_blank" rel="noopener" aria-label="Open SpeechCritic Figure 1 at full resolution">
-<svg viewBox="135 280 1030 438" role="img" aria-label="SpeechCritic Figure 1: diagnostic judging and the data, supervision, SFT, OPD, RL, and evaluation pipeline" xmlns="http://www.w3.org/2000/svg">
-<image href="../assets/speechcritic-figure1.webp" width="1320" height="1020" />
-</svg></a>
-<figcaption>Figure 1 · SpeechCritic: diagnostic judging, training, and evaluation. <a href="../assets/speechcritic-figure1.webp" target="_blank" rel="noopener">View full figure ↗</a></figcaption>
-</figure><p class="paper-links"><a href="https://arxiv.org/abs/2609.34582">Paper</a> <span aria-hidden="true">/</span> <a href="https://mingyue66.github.io/SpeechCritic/">Demo</a></p></article><article class="project" id="speechjudgeaudit"><h2>SpeechJudgeAudit</h2><p class="project-subtitle">Auditing speech LLM judges</p><p>Controlled stimuli and evaluation tools for studying how loudness, content, and emotional delivery affect speech judgments.</p><p class="paper-links"><a href="https://arxiv.org/abs/2609.36979">Paper</a> <span aria-hidden="true">/</span> <a href="https://huggingface.co/datasets/mingyue66/SpeechJudgeAudit">Benchmark</a></p></article><article class="project" id="tagspeech"><h2>TagSpeech</h2><p class="project-subtitle">End-to-end meeting transcription: who spoke what, and when</p><p>TagSpeech unifies multi-speaker ASR, speaker diarization, and timestamp prediction. Dual speech encoders and interleaved time anchors produce structured, speaker-attributed meeting transcripts.</p><ul class="keywords" aria-label="Project keywords"><li>End-to-end ASR</li><li>Diarization</li><li>Meeting transcription</li><li>Temporal grounding</li><li>Audio-language models</li></ul><figure class="project-figure">
-<a class="figure-link" href="../assets/tagspeech-figure2.webp" target="_blank" rel="noopener" aria-label="Open TagSpeech Figure 2 at full resolution">
-<svg viewBox="150 195 1060 320" role="img" aria-label="TagSpeech Figure 2: dual semantic and speaker encoders, projectors, time anchors, and an LLM generating transcripts with speaker labels and timestamps" xmlns="http://www.w3.org/2000/svg">
-<image href="../assets/tagspeech-figure2.webp" width="1320" height="1020" />
-</svg></a>
-<figcaption>Figure 2 · TagSpeech: dual-stream encoding and time-aware transcription. <a href="../assets/tagspeech-figure2.webp" target="_blank" rel="noopener">View full figure ↗</a></figcaption>
-</figure><p class="paper-links"><a href="https://aclanthology.org/2026.acl-long.1938/">Paper</a> <span aria-hidden="true">/</span> <a href="https://github.com/AudenAI/Auden/tree/main/examples/tagspeech">Code &amp; demos</a> <span aria-hidden="true">/</span> <a href="https://huggingface.co/AudenAI/TagSpeech-AMI">Model</a></p></article><article class="project" id="auden"><h2>Auden-Voice</h2><p class="project-subtitle">General-purpose voice representations</p><p>A speech encoder for speaker identity, paralinguistic information, and audio-language understanding, released through Auden.</p><ul class="keywords" aria-label="Project keywords"><li>Representation learning</li><li>Multimodal AI</li><li>Paralinguistics</li><li>Multi-task learning</li></ul><p class="paper-links"><a href="https://arxiv.org/abs/2511.15145">Paper</a> <span aria-hidden="true">/</span> <a href="https://github.com/AudenAI/Auden/tree/main/examples/voice">Code</a> <span aria-hidden="true">/</span> <a href="https://huggingface.co/AudenAI/auden-encoder-voice">Model</a></p></article><article class="project" id="styletse"><h2>StyleTSE / TextrolMix</h2><p class="project-subtitle">Extracting speech with natural language</p><p>Target speech extraction using descriptions of speaking style, together with a speech-mixture and text-description dataset.</p><p class="paper-links"><a href="https://arxiv.org/abs/2501.09169">Paper</a> <span aria-hidden="true">/</span> <a href="https://mingyue66.github.io/TextrolMix/demo/">Audio demos</a></p></article>
-    </main>
-    <footer class="site-footer">
-      <span>Last updated: <time datetime="2026-10-08">October 8, 2026</time></span>
-      <a href="mailto:mhuo5@illinois.edu">Get in touch</a>
-    </footer>
-  </div>
-</body>
+<body><p><a href="../#highlights-title">View highlighted projects on my homepage.</a></p></body>
 </html>

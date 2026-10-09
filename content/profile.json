@@ -14,12 +14,11 @@
     "My research focuses on speech and multimodal AI. I work on foundation-model evaluation and post-training, drawing on speech representation learning, multi-speaker understanding, and human speech perception.",
     "This fall, I am a research intern at Mitsubishi Electric Research Laboratories (MERL), working on long-form audio understanding. Previously, I interned at Netflix, Tencent AI Lab, Amazon Prime Video, and ByteDance AI Lab."
   ],
-  "availability": "I am seeking full-time Research Scientist roles and am available in mid-December 2026.",
+  "availability": "I am seeking full-time Research Scientist or Applied Scientist roles and am available in mid-December 2026.",
   "interests": [
-    "Multimodal foundation models and audio-language understanding",
-    "Post-training and alignment: supervised fine-tuning, on-policy distillation, and reinforcement learning",
-    "Human-aligned evaluation, LLM-as-Judge, and reward modeling",
-    "Representation learning and end-to-end multi-speaker understanding"
+    "Multimodal foundation models; post-training and alignment: supervised fine-tuning, on-policy distillation, and reinforcement learning",
+    "End-to-end multi-speaker understanding and speech representation learning",
+    "Human-aligned evaluation, LLM-as-Judge, and reward modeling"
   ],
   "education": [
     {
@@ -190,7 +189,7 @@
       "id": "auden",
       "name": "Auden-Voice",
       "subtitle": "General-purpose voice representations",
-      "text": "A speech encoder for speaker identity, paralinguistic information, and audio-language understanding, released through Auden.",
+      "text": "A general-purpose voice encoder for speaker identity, paralinguistic understanding, and LLM-QA, with multi-task and contrastive learning experiments and open-source training recipes in Auden.",
       "links": {
         "Paper": "https://arxiv.org/abs/2511.15145",
         "Code": "https://github.com/AudenAI/Auden/tree/main/examples/voice",
@@ -198,25 +197,57 @@
       },
       "keywords": [
         "Representation learning",
-        "Multimodal AI",
-        "Paralinguistics",
-        "Multi-task learning"
-      ]
+        "Speaker embedding",
+        "Speaker verification",
+        "LLM-QA",
+        "Contrastive learning",
+        "Multi-task learning",
+        "Paralinguistics"
+      ],
+      "figure": {
+        "path": "assets/auden-voice-figure1.webp",
+        "number": 1,
+        "width": 1320,
+        "height": 1020,
+        "viewbox": "65 205 1188 461",
+        "alt": "Auden-Voice Figure 1: a Zipformer voice encoder and evaluation setups for linear probing, speaker verification, diarization, speech-text retrieval, zero-shot classification, and LLM question answering",
+        "caption": "Figure 1 · Auden-Voice: voice encoder and speech-language evaluation.",
+        "source": "https://arxiv.org/html/2511.15145v1/Figure1_final.png"
+      }
     },
     {
       "id": "styletse",
-      "name": "StyleTSE / TextrolMix",
-      "subtitle": "Extracting speech with natural language",
-      "text": "Target speech extraction using descriptions of speaking style, together with a speech-mixture and text-description dataset.",
+      "name": "StyleTSE",
+      "subtitle": "Text-guided target speech extraction · ICASSP 2025",
+      "text": "Developed during my Amazon Prime Video internship, StyleTSE extracts target speech from mixtures using natural-language descriptions and optional audio clues. TextrolMix supplies paired speech mixtures and speaking-style descriptions.",
       "links": {
         "Paper": "https://arxiv.org/abs/2501.09169",
-        "Audio demos": "https://mingyue66.github.io/TextrolMix/demo/"
+        "Audio demos": "https://mingyue66.github.io/TextrolMix/demo/",
+        "Dataset": "https://github.com/mingyue66/TextrolMix/"
+      },
+      "keywords": [
+        "Target speech extraction",
+        "Speech separation",
+        "Multimodal learning",
+        "Text-audio fusion",
+        "Dataset construction"
+      ],
+      "figure": {
+        "path": "assets/styletse-figure1.webp",
+        "number": 1,
+        "width": 1320,
+        "height": 1020,
+        "viewbox": "68 435 1190 355",
+        "alt": "StyleTSE Figure 1: a separation network conditioned on text and audio clues, with attention pooling and gated multimodal fusion",
+        "caption": "Figure 1 · StyleTSE: speech separation with text and audio clues.",
+        "source": "https://arxiv.org/html/2501.09169v1/x1.png"
       }
     }
   ],
   "highlights": [
     "speechcritic",
     "tagspeech",
-    "auden"
+    "auden",
+    "styletse"
   ]
 }

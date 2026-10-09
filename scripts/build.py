@@ -49,7 +49,7 @@ def paper(p):
 def render(route,title,content):
     prefix='../' if route else ''
     nav=[]
-    for slug,label in [('', 'Home'),('publications','Publications'),('projects','Projects'),('cv','CV')]:
+    for slug,label in [('', 'Home'),('publications','Publications'),('cv','CV')]:
         href=prefix+(slug+'/' if slug else './')
         active=' aria-current="page"' if slug==route else ''
         nav.append(f'<a href="{href}"{active}>{label}</a>')
@@ -113,15 +113,27 @@ def home():
 <li><time datetime="2026-09">Sep 2026</time><span>Received the {link('https://linguistics.illinois.edu/news/2026-09-01/congratulations-grad-student-award-and-grant-recipients','UIUC Graduate College Dissertation Completion Fellowship')} for 2026–2027.</span></li>
 <li><time datetime="2026-07">Jul 2026</time><span>{link('https://aclanthology.org/2026.acl-long.1938/','TagSpeech')} presented as a main-conference oral at ACL 2026.</span></li>
 </ul></section>
-<section class="section" aria-labelledby="highlights-title"><div class="section-heading"><h2 id="highlights-title">Highlighted Projects</h2>{link('projects/','All projects →')}</div>{highlights}</section>'''
+<section class="section" aria-labelledby="highlights-title"><h2 id="highlights-title">Highlighted Projects</h2>{highlights}</section>'''
 def publications():
     years=sorted({p['year'] for p in papers},reverse=True)
     groups=''.join(f'<section class="publication-year" aria-labelledby="year-{y}"><h2 id="year-{y}">{y}</h2><ul class="paper-list">'+''.join(paper(p) for p in papers if p['year']==y)+'</ul></section>' for y in years)
     return f'''<h1>Publications</h1><p class="page-intro">Papers, preprints, and manuscripts, grouped by publication year. My name is bolded; * indicates equal contribution. See {link(profile['scholar'],'Google Scholar')}.</p>
 <nav class="year-nav" aria-label="Publication years">{' '.join(link('#year-'+str(y),str(y)) for y in years)}</nav>{groups}'''
-def projects():
-    items=''.join(f'<article class="project" id="{esc(p["id"])}"><h2>{esc(p["name"])}</h2><p class="project-subtitle">{esc(p["subtitle"])}</p><p>{esc(p["text"])}</p>{project_keywords(p)}{project_figure(p,"../")}<p class="paper-links">{links(p["links"])}</p></article>' for p in profile['projects'])
-    return '<h1>Projects</h1><p class="page-intro">Research systems, open-source work, and demos for speech and audio understanding.</p>'+items
+def legacy_project_redirect():
+    dest=ROOT/'projects'/'index.html'
+    dest.parent.mkdir(exist_ok=True)
+    dest.write_text('''<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="0; url=../#highlights-title">
+  <link rel="canonical" href="https://mingyue66.github.io/#highlights-title">
+  <title>Research projects | Mingyue Huo</title>
+</head>
+<body><p><a href="../#highlights-title">View highlighted projects on my homepage.</a></p></body>
+</html>
+''')
 def cv():
     cv_version=hashlib.sha256((ROOT/profile['cv']).read_bytes()).hexdigest()[:10]
     cv_url='../'+profile['cv']+'?v='+cv_version
@@ -140,6 +152,6 @@ if __name__=='__main__':
     assert all(profile['name'] in p['authors'] for p in papers),'Unexpected author'
     render('','Home',home())
     render('publications','Publications',publications())
-    render('projects','Projects',projects())
+    legacy_project_redirect()
     render('cv','CV',cv())
-    print(f'Rendered four static pages and {len(papers)} publications.')
+    print(f'Rendered three static pages, one legacy redirect, and {len(papers)} publications.')
