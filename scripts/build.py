@@ -117,7 +117,7 @@ def home():
 def publications():
     years=sorted({p['year'] for p in papers},reverse=True)
     groups=''.join(f'<section class="publication-year" aria-labelledby="year-{y}"><h2 id="year-{y}">{y}</h2><ul class="paper-list">'+''.join(paper(p) for p in papers if p['year']==y)+'</ul></section>' for y in years)
-    return f'''<h1>Publications</h1><p class="page-intro">Papers, preprints, and manuscripts, grouped by publication year. My name is bolded; * indicates equal contribution. See {link(profile['scholar'],'Google Scholar')} for citations.</p>
+    return f'''<h1>Publications</h1><p class="page-intro">Papers, preprints, and manuscripts, grouped by publication year. My name is bolded; * indicates equal contribution. See {link(profile['scholar'],'Google Scholar')}.</p>
 <nav class="year-nav" aria-label="Publication years">{' '.join(link('#year-'+str(y),str(y)) for y in years)}</nav>{groups}'''
 def projects():
     items=''.join(f'<article class="project" id="{esc(p["id"])}"><h2>{esc(p["name"])}</h2><p class="project-subtitle">{esc(p["subtitle"])}</p><p>{esc(p["text"])}</p>{project_keywords(p)}{project_figure(p,"../")}<p class="paper-links">{links(p["links"])}</p></article>' for p in profile['projects'])

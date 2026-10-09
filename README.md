@@ -31,14 +31,13 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 ## 内容核对
 
-此版根据用户提供的 2026 年 9 月 CV，以及 2026 年 10 月 8 日检索的公开记录整理。10 篇 arXiv 论文按作者全名匹配，另有 CV 中的 4 篇非 arXiv 论文与 1 篇在投稿件，共 15 条；不把预印本标成已录用论文。
+此版根据用户提供的 2026 年 9 月 CV，以及 2026 年 10 月 8 日检索的公开记录整理。10 篇 arXiv 论文按作者全名匹配，另有 CV 中的 4 篇非 arXiv 论文，共 14 条；不把预印本标成已录用论文。
 
 - 姓名、邮箱、经历、求职信息、项目链接：最新 CV。
 - 公开预印本的题名和作者：arXiv 最新记录。CV 中 “Misgrounded Rationales” 对应 arXiv 的 “Underspecified Rationales”；“Fooling Reward Models with Gibberish” 对应 arXiv 的 “Beyond Semantic Manipulation”。本站使用 arXiv 题名，避免同一稿件重复计数。
-- SESR 只有 CV 中的在投信息，因此没有虚构 arXiv 或论文链接。
 - TagSpeech 和音频预训练论文：ACL Anthology 2026 正式页面；TagSpeech 的 Oral 状态见最新 CV 和 arXiv v2 评论。
 - Auden-Voice 的 ICASSP 2026 状态：最新 CV 与会议官方日程。
-- Applied Linguistics 论文：正式卷期是 2026 年，online-first 为 2025 年；页面同时保留这两项信息。
+- Applied Linguistics 论文：正式卷期是 2026 年，online-first 为 2025 年；按用户要求放在 2025 年列表最后，保留卷期与 online-first 信息。
 - 肖像来自用户的 UIUC 公开个人资料；原来的动漫图片仍保留在 `images/go.jpg`。
 - 最新 PDF 原样保存；旧 PDF 路径继续保留，避免既有外部链接失效。
 

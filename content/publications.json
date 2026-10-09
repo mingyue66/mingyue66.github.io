@@ -46,26 +46,6 @@
     ]
   },
   {
-    "id": "sesr",
-    "title": "SESR: A Sound Event Structure Reward for Fine-grained Text-to-audio Alignment",
-    "authors": [
-      "Haoyu Zhang",
-      "Mingyue Huo",
-      "Dong Yang",
-      "Kiyoshi Kurihara",
-      "Irene Li",
-      "Yusuke Iwasawa",
-      "Yutaka Matsuo"
-    ],
-    "year": 2026,
-    "date": "2026-09-20",
-    "venue": "Manuscript in submission",
-    "links": {},
-    "sources": [
-      "CV_MingyueHuo_UIUC.pdf (September 2026)"
-    ]
-  },
-  {
     "id": "2607.11157",
     "title": "Where Speech Enhancement Hurts Recognition: An Inference Time Polar Projection Diagnosis",
     "authors": [
@@ -108,26 +88,6 @@
     ],
     "sources": [
       "https://arxiv.org/abs/2604.02686"
-    ]
-  },
-  {
-    "id": "listening",
-    "title": "What makes listening comprehension difficult?: A feature-based machine learning approach to understanding item difficulty",
-    "authors": [
-      "Huiying Cai",
-      "Xun Yan",
-      "Ping-Lin Chuang",
-      "Yulin Pan",
-      "Mingyue Huo"
-    ],
-    "year": 2026,
-    "date": "2026-04-01",
-    "venue": "Applied Linguistics 47(2), 406–428 · Online first: 2025",
-    "links": {
-      "Paper": "https://academic.oup.com/applij/article/47/2/406/8341053"
-    },
-    "sources": [
-      "https://academic.oup.com/applij/article/47/2/406/8341053"
     ]
   },
   {
@@ -272,6 +232,26 @@
     "equal_contribution": [],
     "sources": [
       "https://arxiv.org/abs/2407.00617"
+    ]
+  },
+  {
+    "id": "listening",
+    "title": "What makes listening comprehension difficult?: A feature-based machine learning approach to understanding item difficulty",
+    "authors": [
+      "Huiying Cai",
+      "Xun Yan",
+      "Ping-Lin Chuang",
+      "Yulin Pan",
+      "Mingyue Huo"
+    ],
+    "year": 2025,
+    "date": "2026-04-01",
+    "venue": "Applied Linguistics 47(2), 406–428 · Online first: 2025",
+    "links": {
+      "Paper": "https://academic.oup.com/applij/article/47/2/406/8341053"
+    },
+    "sources": [
+      "https://academic.oup.com/applij/article/47/2/406/8341053"
     ]
   },
   {
