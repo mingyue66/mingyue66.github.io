@@ -2,14 +2,41 @@
 """Render GitHub Pages using only the Python standard library."""
 from datetime import date
 from html import escape
+import hashlib
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 profile=json.loads((ROOT/'content/profile.json').read_text())
 papers=json.loads((ROOT/'content/publications.json').read_text())
+style_version=hashlib.sha256((ROOT/'stylesheet.css').read_bytes()).hexdigest()[:10]
 def esc(s): return escape(str(s),quote=True)
 def link(u,n): return f'<a href="{esc(u)}">{esc(n)}</a>'
 def links(items): return ' <span aria-hidden="true">/</span> '.join(link(u,n) for n,u in items.items())
+def project_keywords(p):
+    if not p.get('keywords'): return ''
+    tags=''.join(f'<li>{esc(k)}</li>' for k in p['keywords'])
+    return f'<ul class="keywords" aria-label="Project keywords">{tags}</ul>'
+def project_figure(p,prefix=''):
+    f=p.get('figure')
+    if not f: return ''
+    path=prefix+f['path']
+    # Frame the paper figure without altering the source pixels; whitespace only.
+    return f'''<figure class="project-figure">
+<a class="figure-link" href="{esc(path)}" target="_blank" rel="noopener" aria-label="Open {esc(p['name'])} Figure {f['number']} at full resolution">
+<svg viewBox="{esc(f['viewbox'])}" role="img" aria-label="{esc(f['alt'])}" xmlns="http://www.w3.org/2000/svg">
+<image href="{esc(path)}" width="{f['width']}" height="{f['height']}" />
+</svg></a>
+<figcaption>{esc(f['caption'])} <a href="{esc(path)}" target="_blank" rel="noopener">View full figure ↗</a></figcaption>
+</figure>'''
+def highlighted_project(p):
+    return f'''<article class="highlighted-project" id="highlight-{esc(p['id'])}">
+<h3>{link(p['links']['Paper'],p['name'])}</h3>
+<p class="project-subtitle">{esc(p['subtitle'])}</p>
+<p class="project-description">{esc(p['text'])}</p>
+{project_keywords(p)}
+{project_figure(p)}
+<p class="paper-links">{links(p['links'])}</p>
+</article>'''
 def paper(p):
     authors=[]
     for a in p['authors']:
@@ -45,7 +72,7 @@ def render(route,title,content):
   <meta property="og:description" content="{esc(description)}">
   <meta property="og:url" content="{canonical}">
   <link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="{prefix}stylesheet.css">
+  <link rel="stylesheet" href="{prefix}stylesheet.css?v={style_version}">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -71,7 +98,7 @@ def render(route,title,content):
 def home():
     bio='\n'.join(f'<p>{esc(p)}</p>' for p in profile['bio'])
     interests=''.join(f'<li>{esc(p)}</li>' for p in profile['interests'])
-    selected=''.join(paper(next(p for p in papers if p['id']==id)) for id in ['2609.34582','2601.06896','2511.15145'])
+    highlights=''.join(highlighted_project(next(p for p in profile['projects'] if p['id']==id)) for id in profile['highlights'])
     contacts=links({'Google Scholar':profile['scholar'],'GitHub':profile['github'],'LinkedIn':profile['linkedin'],profile['email']:'mailto:'+profile['email']})
     return f'''<section class="intro" aria-label="About Mingyue">
 <img class="portrait" src="assets/portrait.jpg" width="164" height="198" alt="Mingyue Huo by the waterfront" fetchpriority="high">
@@ -82,18 +109,18 @@ def home():
 <section class="section" aria-labelledby="research-title"><h2 id="research-title">Research Interests</h2><ul class="plain-list">{interests}</ul></section>
 <section class="section" aria-labelledby="news-title"><h2 id="news-title">Recent News</h2>
 <ul class="news-list">
-<li><time datetime="2026-09">Sep 2026</time><span>New preprints: {link('https://arxiv.org/abs/2609.34582','SpeechCritic')} and {link('https://arxiv.org/abs/2609.36979','Louder, Longer, Livelier')} on speech model evaluation.</span></li>
+<li><time datetime="2026-09">Sep 2026</time><span>New preprints from my Netflix internship: {link('https://arxiv.org/abs/2609.34582','SpeechCritic')} and {link('https://arxiv.org/abs/2609.36979','Louder, Longer, Livelier')} on human-aligned speech evaluation.</span></li>
 <li><time datetime="2026-09">Sep 2026</time><span>Received the {link('https://linguistics.illinois.edu/news/2026-09-01/congratulations-grad-student-award-and-grant-recipients','UIUC Graduate College Dissertation Completion Fellowship')} for 2026–2027.</span></li>
 <li><time datetime="2026-07">Jul 2026</time><span>{link('https://aclanthology.org/2026.acl-long.1938/','TagSpeech')} presented as a main-conference oral at ACL 2026.</span></li>
 </ul></section>
-<section class="section" aria-labelledby="selected-title"><div class="section-heading"><h2 id="selected-title">Selected Publications</h2>{link('publications/','All publications →')}</div><ul class="paper-list">{selected}</ul></section>'''
+<section class="section" aria-labelledby="highlights-title"><div class="section-heading"><h2 id="highlights-title">Highlighted Projects</h2>{link('projects/','All projects →')}</div>{highlights}</section>'''
 def publications():
     years=sorted({p['year'] for p in papers},reverse=True)
     groups=''.join(f'<section class="publication-year" aria-labelledby="year-{y}"><h2 id="year-{y}">{y}</h2><ul class="paper-list">'+''.join(paper(p) for p in papers if p['year']==y)+'</ul></section>' for y in years)
     return f'''<h1>Publications</h1><p class="page-intro">Papers, preprints, and manuscripts, grouped by publication year. My name is bolded; * indicates equal contribution. See {link(profile['scholar'],'Google Scholar')} for citations.</p>
 <nav class="year-nav" aria-label="Publication years">{' '.join(link('#year-'+str(y),str(y)) for y in years)}</nav>{groups}'''
 def projects():
-    items=''.join(f'<article class="project" id="{esc(p["id"])}"><h2>{esc(p["name"])}</h2><p class="project-subtitle">{esc(p["subtitle"])}</p><p>{esc(p["text"])}</p><p class="paper-links">{links(p["links"])}</p></article>' for p in profile['projects'])
+    items=''.join(f'<article class="project" id="{esc(p["id"])}"><h2>{esc(p["name"])}</h2><p class="project-subtitle">{esc(p["subtitle"])}</p><p>{esc(p["text"])}</p>{project_keywords(p)}{project_figure(p,"../")}<p class="paper-links">{links(p["links"])}</p></article>' for p in profile['projects'])
     return '<h1>Projects</h1><p class="page-intro">Research systems, open-source work, and demos for speech and audio understanding.</p>'+items
 def cv():
     edu=''.join(f'<li><div><strong>{esc(p["degree"])}</strong><p>{esc(p["school"])}</p></div><span class="date">{esc(p["date"])}</span></li>' for p in profile['education'])

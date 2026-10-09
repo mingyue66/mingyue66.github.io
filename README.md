@@ -1,6 +1,6 @@
 # Mingyue Huo — personal homepage
 
-A minimal academic homepage for `mingyue66.github.io`. Four static pages, one shared stylesheet, system fonts, and no client-side JavaScript or third-party tracking.
+A minimal academic homepage for `mingyue66.github.io`. Four static pages, one shared stylesheet, system fonts, and no client-side JavaScript or third-party tracking. The homepage highlights projects with paper figures and research keywords.
 
 ## 更新内容
 
@@ -52,3 +52,12 @@ python3 -m http.server 8765 --bind 127.0.0.1
 - https://academic.oup.com/applij/article/47/2/406/8341053
 
 删除了旧模板中另一位作者的教育、论文、奖项、LinkedIn、Google Scholar 和 Google Analytics 追踪代码。旧版本可从 Git 历史恢复。
+
+## 项目图与关键词
+
+`content/profile.json` 的 `highlights` 决定首页项目顺序，项目中的 `keywords` 与 `figure` 同步用于首页和 Projects 页。
+
+- SpeechCritic：Figure 1，来源 https://arxiv.org/html/2609.34582v1/Fig1.png
+- TagSpeech：Figure 2，来源 https://arxiv.org/html/2601.06896v2/model_structure.png
+
+原论文图片无损转换为 WebP；SVG 的 viewBox 仅将周围空白移出显示范围，原图内容保留，点击可查看完整原图。

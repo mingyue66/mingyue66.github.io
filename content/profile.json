@@ -3,7 +3,7 @@
   "chinese_name": "霍明月",
   "email": "mhuo5@illinois.edu",
   "updated": "2026-10-08",
-  "description": "Mingyue Huo is a PhD candidate at UIUC working on speech and multimodal AI, foundation-model evaluation, and multi-speaker understanding.",
+  "description": "Mingyue Huo is a PhD candidate at UIUC working on multimodal AI, post-training, reinforcement learning, and human-aligned foundation-model evaluation.",
   "scholar": "https://scholar.google.com/citations?user=r5URsrYAAAAJ&hl=en",
   "github": "https://github.com/mingyue66",
   "linkedin": "https://www.linkedin.com/in/mingyue-huo-5a7395224/",
@@ -13,11 +13,12 @@
     "My research focuses on speech and multimodal AI. I work on foundation-model evaluation and post-training, drawing on speech representation learning, multi-speaker understanding, and human speech perception.",
     "This fall, I am a research intern at Mitsubishi Electric Research Laboratories (MERL), working on long-form audio understanding. Previously, I interned at Netflix, Tencent AI Lab, Amazon Prime Video, and ByteDance AI Lab."
   ],
-  "availability": "I am seeking full-time Research Scientist roles and am available in Fall 2026.",
+  "availability": "I am seeking full-time Research Scientist roles and am available in mid-December 2026.",
   "interests": [
-    "Evaluating and improving speech and audio-language models",
-    "Multi-speaker ASR, diarization, and target speech extraction",
-    "Speech representations and human-aligned speech understanding"
+    "Multimodal foundation models and audio-language understanding",
+    "Post-training and alignment: supervised fine-tuning, on-policy distillation, and reinforcement learning",
+    "Human-aligned evaluation, LLM-as-Judge, and reward modeling",
+    "Representation learning and end-to-end multi-speaker understanding"
   ],
   "education": [
     {
@@ -120,11 +121,30 @@
     {
       "id": "speechcritic",
       "name": "SpeechCritic",
-      "subtitle": "A diagnostic speech judge",
-      "text": "Comparing generated speech across perceptual dimensions, with acoustic evidence and limited human preference supervision.",
+      "subtitle": "Diagnostic audio LLM judges from limited human preferences",
+      "text": "Developed during my Netflix internship, SpeechCritic combines human-calibrated supervision with SFT, OPD, and RL to train and evaluate diagnostic speech judges across perceptual dimensions.",
       "links": {
         "Paper": "https://arxiv.org/abs/2609.34582",
         "Demo": "https://mingyue66.github.io/SpeechCritic/"
+      },
+      "keywords": [
+        "LLM-as-Judge",
+        "Evaluation",
+        "SFT",
+        "OPD",
+        "RL",
+        "Human preferences",
+        "Multimodal AI"
+      ],
+      "figure": {
+        "path": "assets/speechcritic-figure1.webp",
+        "number": 1,
+        "width": 1320,
+        "height": 1020,
+        "viewbox": "135 280 1030 438",
+        "alt": "SpeechCritic Figure 1: diagnostic judging and the data, supervision, SFT, OPD, RL, and evaluation pipeline",
+        "caption": "Figure 1 · SpeechCritic: diagnostic judging, training, and evaluation.",
+        "source": "https://arxiv.org/html/2609.34582v1/Fig1.png"
       }
     },
     {
@@ -140,12 +160,29 @@
     {
       "id": "tagspeech",
       "name": "TagSpeech",
-      "subtitle": "Who spoke what, and when",
-      "text": "End-to-end multi-speaker ASR and diarization with fine-grained timestamps. Includes examples for meeting transcription.",
+      "subtitle": "End-to-end meeting transcription: who spoke what, and when",
+      "text": "TagSpeech unifies multi-speaker ASR, speaker diarization, and timestamp prediction. Dual speech encoders and interleaved time anchors produce structured, speaker-attributed meeting transcripts.",
       "links": {
         "Paper": "https://aclanthology.org/2026.acl-long.1938/",
         "Code & demos": "https://github.com/AudenAI/Auden/tree/main/examples/tagspeech",
         "Model": "https://huggingface.co/AudenAI/TagSpeech-AMI"
+      },
+      "keywords": [
+        "End-to-end ASR",
+        "Diarization",
+        "Meeting transcription",
+        "Temporal grounding",
+        "Audio-language models"
+      ],
+      "figure": {
+        "path": "assets/tagspeech-figure2.webp",
+        "number": 2,
+        "width": 1320,
+        "height": 1020,
+        "viewbox": "150 195 1060 320",
+        "alt": "TagSpeech Figure 2: dual semantic and speaker encoders, projectors, time anchors, and an LLM generating transcripts with speaker labels and timestamps",
+        "caption": "Figure 2 · TagSpeech: dual-stream encoding and time-aware transcription.",
+        "source": "https://arxiv.org/html/2601.06896v2/model_structure.png"
       }
     },
     {
@@ -157,7 +194,13 @@
         "Paper": "https://arxiv.org/abs/2511.15145",
         "Code": "https://github.com/AudenAI/Auden/tree/main/examples/voice",
         "Model": "https://huggingface.co/AudenAI/auden-encoder-voice"
-      }
+      },
+      "keywords": [
+        "Representation learning",
+        "Multimodal AI",
+        "Paralinguistics",
+        "Multi-task learning"
+      ]
     },
     {
       "id": "styletse",
@@ -169,5 +212,10 @@
         "Audio demos": "https://mingyue66.github.io/TextrolMix/demo/"
       }
     }
+  ],
+  "highlights": [
+    "speechcritic",
+    "tagspeech",
+    "auden"
   ]
 }
