@@ -30,6 +30,8 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 沿用现有仓库的发布方式。若需重新配置，GitHub 仓库 Settings → Pages → Deploy from a branch，选择 `master`、`/(root)`。`.nojekyll` 让这些静态文件直接发布。
 
+Google Search Console 验证文件 `google32216f9cbe463867.html` 原样保存在仓库根目录。验证成功后仍需保留该文件，以维持网站所有权验证。
+
 ## 内容核对
 
 此版根据用户提供的 2026 年 9 月 CV，以及 2026 年 10 月 8 日检索的公开记录整理。10 篇 arXiv 论文按作者全名匹配，另有 CV 中的 4 篇非 arXiv 论文，共 14 条；不把预印本标成已录用论文。
