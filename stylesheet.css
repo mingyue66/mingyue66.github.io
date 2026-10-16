@@ -38,6 +38,7 @@ strong { font-weight:600; }
 .authors { color:#444b52; }
 .authors strong { color:#202428; }
 .venue,.muted,.date { color:var(--muted); }
+.paper .oral { color:#c62828; font-weight:600; }
 .paper-links { font-size:14px; }
 .paper-links span { color:#abb3bb; padding:0 5px; }
 .page-intro { color:#4b535b; margin-bottom:20px; }

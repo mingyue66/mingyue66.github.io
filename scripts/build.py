@@ -4,6 +4,7 @@ from datetime import date
 from html import escape
 import hashlib
 import json
+import re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 profile=json.loads((ROOT/'content/profile.json').read_text())
@@ -50,7 +51,8 @@ def paper(p):
     url=p['links'].get('Paper') or p['links'].get('arXiv') or p['links'].get('PDF')
     title=link(url,p['title']) if url else esc(p['title'])
     resources=f'<p class="paper-links">{links(p["links"])}</p>' if p['links'] else ''
-    return f'<li class="paper" id="paper-{esc(p["id"])}"><h3>{title}</h3><p class="authors">{", ".join(authors)}</p><p class="venue">{esc(p["venue"])}</p>{resources}</li>'
+    venue=re.sub(r'\boral\b',r'<span class="oral">\g<0></span>',esc(p['venue']),flags=re.IGNORECASE)
+    return f'<li class="paper" id="paper-{esc(p["id"])}"><h3>{title}</h3><p class="authors">{", ".join(authors)}</p><p class="venue">{venue}</p>{resources}</li>'
 def render(route,title,content):
     prefix='../' if route else ''
     nav=[]
