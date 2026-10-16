@@ -2,7 +2,7 @@
   "name": "Mingyue Huo",
   "chinese_name": "霍明月",
   "email": "mhuo5@illinois.edu",
-  "updated": "2026-10-08",
+  "updated": "2026-10-16",
   "description": "Mingyue Huo is a PhD candidate at UIUC working on multimodal AI, post-training, reinforcement learning, and human-aligned foundation-model evaluation.",
   "scholar": "https://scholar.google.com/citations?user=r5URsrYAAAAJ&hl=en",
   "github": "https://github.com/mingyue66",
@@ -145,7 +145,8 @@
         "alt": "SpeechCritic Figure 1: diagnostic judging and the data, supervision, SFT, OPD, RL, and evaluation pipeline",
         "caption": "Figure 1 · SpeechCritic: diagnostic judging, training, and evaluation.",
         "source": "https://arxiv.org/html/2609.34582v1/Fig1.png"
-      }
+      },
+      "badge": "Netflix"
     },
     {
       "id": "speechjudgeaudit",
@@ -183,7 +184,8 @@
         "alt": "TagSpeech Figure 2: dual semantic and speaker encoders, projectors, time anchors, and an LLM generating transcripts with speaker labels and timestamps",
         "caption": "Figure 2 · TagSpeech: dual-stream encoding and time-aware transcription.",
         "source": "https://arxiv.org/html/2601.06896v2/model_structure.png"
-      }
+      },
+      "badge": "ACL 2026"
     },
     {
       "id": "auden",
@@ -213,7 +215,8 @@
         "alt": "Auden-Voice Figure 1: a Zipformer voice encoder and evaluation setups for linear probing, speaker verification, diarization, speech-text retrieval, zero-shot classification, and LLM question answering",
         "caption": "Figure 1 · Auden-Voice: voice encoder and speech-language evaluation.",
         "source": "https://arxiv.org/html/2511.15145v1/Figure1_final.png"
-      }
+      },
+      "badge": "ICASSP 2026"
     },
     {
       "id": "styletse",
@@ -241,7 +244,8 @@
         "alt": "StyleTSE Figure 1: a separation network conditioned on text and audio clues, with attention pooling and gated multimodal fusion",
         "caption": "Figure 1 · StyleTSE: speech separation with text and audio clues.",
         "source": "https://arxiv.org/html/2501.09169v1/x1.png"
-      }
+      },
+      "badge": "ICASSP 2025"
     }
   ],
   "highlights": [

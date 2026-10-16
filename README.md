@@ -59,6 +59,8 @@ Google Search Console 验证文件 `google32216f9cbe463867.html` 原样保存在
 
 `content/profile.json` 的 `highlights` 决定首页项目顺序，项目中的 `keywords` 与 `figure` 用于首页展示。导航只保留 Home、Publications 和 CV。
 
+项目在桌面端采用左图右文布局，窄屏改为单列。`badge` 设置图片左上角的会议或实习标签；完整图注保留给辅助阅读工具，图片和下方链接均可打开原图。
+
 - SpeechCritic：Figure 1，来源 https://arxiv.org/html/2609.34582v1/Fig1.png
 - TagSpeech：Figure 2，来源 https://arxiv.org/html/2601.06896v2/model_structure.png
 - Auden-Voice：Figure 1，来源 https://arxiv.org/html/2511.15145v1/Figure1_final.png

@@ -20,22 +20,27 @@ def project_figure(p,prefix=''):
     f=p.get('figure')
     if not f: return ''
     path=prefix+f['path']
+    badge=f'<span class="project-badge">{esc(p["badge"])}</span>' if p.get('badge') else ''
+    figure_label=p['name']+(' · '+p['badge'] if p.get('badge') else '')
     # Frame the paper figure without altering the source pixels; whitespace only.
-    return f'''<figure class="project-figure">
+    return f'''<figure class="project-figure" aria-label="{esc(figure_label)}">
 <a class="figure-link" href="{esc(path)}" target="_blank" rel="noopener" aria-label="Open {esc(p['name'])} Figure {f['number']} at full resolution">
+{badge}
 <svg viewBox="{esc(f['viewbox'])}" role="img" aria-label="{esc(f['alt'])}" xmlns="http://www.w3.org/2000/svg">
 <image href="{esc(path)}" width="{f['width']}" height="{f['height']}" />
 </svg></a>
-<figcaption>{esc(f['caption'])} <a href="{esc(path)}" target="_blank" rel="noopener">View full figure ↗</a></figcaption>
+<figcaption><span class="figure-caption-text">{esc(f['caption'])}</span> <a href="{esc(path)}" target="_blank" rel="noopener">View full figure ↗</a></figcaption>
 </figure>'''
 def highlighted_project(p):
     return f'''<article class="highlighted-project" id="highlight-{esc(p['id'])}">
+{project_figure(p)}
+<div class="project-details">
 <h3>{link(p['links']['Paper'],p['name'])}</h3>
 <p class="project-subtitle">{esc(p['subtitle'])}</p>
 <p class="project-description">{esc(p['text'])}</p>
 {project_keywords(p)}
-{project_figure(p)}
 <p class="paper-links">{links(p['links'])}</p>
+</div>
 </article>'''
 def paper(p):
     authors=[]
