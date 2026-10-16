@@ -125,6 +125,7 @@
       "text": "Developed during my Netflix internship, SpeechCritic combines human-calibrated supervision with SFT, OPD, and RL to train and evaluate diagnostic speech judges across perceptual dimensions.",
       "links": {
         "Paper": "https://arxiv.org/abs/2609.34582",
+        "Code": "https://github.com/mingyue66/Speech_Critic",
         "Demo": "https://mingyue66.github.io/SpeechCritic/"
       },
       "keywords": [

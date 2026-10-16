@@ -38,6 +38,7 @@
     "arxiv": "2609.34582",
     "links": {
       "arXiv": "https://arxiv.org/abs/2609.34582",
+      "Code": "https://github.com/mingyue66/Speech_Critic",
       "Demo": "https://mingyue66.github.io/SpeechCritic/"
     },
     "equal_contribution": [],
